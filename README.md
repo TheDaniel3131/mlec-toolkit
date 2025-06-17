@@ -1,4 +1,3 @@
-
 # MLEC-Toolkit
 
 A Makefile toolkit for easy, quick scaffolding local web development projects.
@@ -17,7 +16,7 @@ Before using MLEC, you need to have `make` installed on your system:
 
 ## 🚀 Quick Start
 
-1. Place the `Makefile` in your projects directory **OR** in a global location like `D:/` or `C:/`
+1. Place the `Makefile` in your projects directory **OR** in a global location like `D:/mlec-toolkit/` or `C:/mlec-toolkit/`
 2. Run `make` or `make board` to see available commands
 3. Create projects using: `make <command> name=<project-name>`
 
@@ -34,9 +33,44 @@ make create-next name=my-awesome-app
 
 ```bash
 # Use -f flag to specify Makefile path
-make -f D:/Makefile create-next name=my-awesome-app
-make -f C:/path/to/Makefile create-react name=my-react-app
+make -f D:/Projects\ 2025/mlec-toolkit/Makefile create-next name=my-awesome-app
+make -f C:/tools/makefiles/Makefile create-react name=my-react-app
 ```
+
+### 🔗 Setting Up Aliases (Recommended)
+
+For easier access, create an alias to avoid typing the full path every time:
+
+**Windows (Git Bash/WSL):**
+
+```bash
+# Add to ~/.bashrc or ~/.bash_profile
+alias mlec='make -f "D:/Projects 2025/mlec-toolkit/Makefile"'
+
+# Usage after alias setup
+mlec create-next name=my-awesome-app
+mlec create-react-ts name=my-react-app
+```
+
+**macOS/Linux:**
+
+```bash
+# Add to ~/.bashrc, ~/.zshrc, or ~/.bash_profile
+alias mlec='make -f /path/to/your/makefiles/Makefile'
+
+# Usage after alias setup
+mlec create-vue-vite name=my-vue-app
+mlec create-astro name=my-site
+```
+
+**PowerShell (Windows):**
+
+```powershell
+# Add to PowerShell profile
+Set-Alias -Name mlec -Value 'make -f "D:\Projects 2025\mlec-toolkit\Makefile"'
+```
+
+> 💡 **Tip**: Create a dedicated directory for your makefiles (e.g., `D:/Projects 2025/mlec-toolkit/` or `C:/tools/makefiles/`) to keep them organized and easily accessible across all your projects.
 
 ### Example Usage
 
@@ -45,10 +79,11 @@ make -f C:/path/to/Makefile create-react name=my-react-app
 make create-next name=my-awesome-app
 
 # Create a React TypeScript project (remote Makefile)
-make -f D:/Makefile create-react-ts name=my-react-app
+make -f D:/Projects\ 2025/mlec-toolkit/Makefile create-react-ts name=my-react-app
 
-# Create a Vue project with Vite (remote Makefile)
-make -f C:/tools/Makefile create-vue-vite name=my-vue-app
+# Using alias (after setup)
+mlec create-vue-vite name=my-vue-app
+mlec create-nest name=my-api-server
 ```
 
 ## 📚 Available Commands
@@ -102,6 +137,7 @@ make -f C:/tools/Makefile create-vue-vite name=my-vue-app
 
 - Always specify a project name: `make <command> name=<your-project-name>`
 - Use `-f <path>` when Makefile is not in current directory
+- Set up aliases for frequently used makefiles to simplify commands
 - The Makefile uses `/bin/bash` as the default shell
 - Commands will create projects in your current directory
 - If a command isn't found, the help board will automatically display
