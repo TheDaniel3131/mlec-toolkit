@@ -7,9 +7,6 @@ A Makefile toolkit for quickly scaffolding web development projects.
 
 **MLEC** (Make Life Easier Commands) is a comprehensive Makefile toolkit designed to streamline the creation of various web development projects. Instead of remembering complex npm/npx commands, simply use short make commands to scaffold your projects instantly.
 
-**Author:** zephrous  
-**Project:** mlec-toolkit
-
 ## 🚀 Quick Start
 
 1. Place the `Makefile` in your projects directory
@@ -89,4 +86,4 @@ The Makefile includes examples of different shell configurations at the top. You
 
 ---
 
-*This toolkit is designed for local development environments to simplify project scaffolding workflows.*
+*This toolkit is designed for local development environments to simplify project scaffolding workflows. Created by @zephrous.*
