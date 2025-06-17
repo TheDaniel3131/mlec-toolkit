@@ -17,21 +17,38 @@ Before using MLEC, you need to have `make` installed on your system:
 
 ## 🚀 Quick Start
 
-1. Place the `Makefile` in your projects directory
+1. Place the `Makefile` in your projects directory **OR** in a global location like `D:/` or `C:/`
 2. Run `make` or `make board` to see available commands
 3. Create projects using: `make <command> name=<project-name>`
+
+### Makefile Location Usage
+
+**If Makefile is in your current project directory:**
+
+```bash
+# Standard usage
+make create-next name=my-awesome-app
+```
+
+**If Makefile is in a different location (e.g., D:/ or C:/):**
+
+```bash
+# Use -f flag to specify Makefile path
+make -f D:/Makefile create-next name=my-awesome-app
+make -f C:/path/to/Makefile create-react name=my-react-app
+```
 
 ### Example Usage
 
 ```bash
-# Create a Next.js project
+# Create a Next.js project (local Makefile)
 make create-next name=my-awesome-app
 
-# Create a React TypeScript project  
-make create-react-ts name=my-react-app
+# Create a React TypeScript project (remote Makefile)
+make -f D:/Makefile create-react-ts name=my-react-app
 
-# Create a Vue project with Vite
-make create-vue-vite name=my-vue-app
+# Create a Vue project with Vite (remote Makefile)
+make -f C:/tools/Makefile create-vue-vite name=my-vue-app
 ```
 
 ## 📚 Available Commands
@@ -84,6 +101,7 @@ make create-vue-vite name=my-vue-app
 ## 💡 Usage Tips
 
 - Always specify a project name: `make <command> name=<your-project-name>`
+- Use `-f <path>` when Makefile is not in current directory
 - The Makefile uses `/bin/bash` as the default shell
 - Commands will create projects in your current directory
 - If a command isn't found, the help board will automatically display
