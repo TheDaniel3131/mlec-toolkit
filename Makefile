@@ -29,10 +29,10 @@ create-next-ts:
 
 # React projects
 create-react:
-	npx create-react-app $(name)
+	npx create-react-app@latest $(name)
 
 create-react-ts:
-	npx create-react-app $(name) --template typescript
+	npx create-react-app@latest $(name) --template typescript
 
 # Vue projects
 create-vue:
@@ -50,7 +50,7 @@ create-svelte:
 	npm create svelte@latest $(name)
 
 create-angular:
-	npx @angular/cli new $(name)
+	npx @angular/cli@latest new $(name)
 
 create-nuxt:
 	npx nuxi init $(name)
@@ -63,21 +63,21 @@ create-express:
 	npx express-generator $(name)
 
 create-nest:
-	npx @nestjs/cli new $(name)
+	npx @nestjs/cli@latest new $(name)
 
 # Static site generators
 create-astro:
 	npm create astro@latest $(name)
 
 create-gatsby:
-	npx gatsby new $(name)
+	npx gatsby-cli@latest new $(name)
 
 # Tools
 create-storybook:
 	npx sb init
 
 create-electron:
-	npx create-electron-app $(name)
+	npx create-electron-app@latest $(name)
 
 setup-tailwind:
 	npx tailwindcss init -p
