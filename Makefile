@@ -128,7 +128,7 @@ board:
 	@echo "    create-storybook      - Initialize Storybook"
 	@echo "    create-electron       - Create Electron app"
 	@echo "    setup-tailwind        - Setup Tailwind CSS"
-
+	@echo ""
 	@echo "======================================================================"
 	@echo "For more information, run 'make help', 'make author' or 'make info'."
 	@echo "======================================================================"
