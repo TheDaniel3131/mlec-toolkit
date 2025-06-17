@@ -66,9 +66,60 @@ mlec create-astro name=my-site
 **PowerShell (Windows):**
 
 ```powershell
-# Add to PowerShell profile
-Set-Alias -Name mlec -Value 'make -f "D:\Projects 2025\mlec-toolkit\Makefile"'
+# PowerShell requires a function, not an alias
+function mlec {
+    make -f "D:/Projects 2025/mlec-toolkit/Makefile" @args
+}
 ```
+
+#### ✅ PowerShell Setup (Detailed)
+
+In PowerShell, you can't create complex aliases like in bash. PowerShell aliases can only alias commands, not full command strings with parameters.
+
+**🔧 To Set Up PowerShell Function:**
+
+1. **Check if your PowerShell profile exists:**
+
+   ```powershell
+   Test-Path $PROFILE
+   ```
+
+2. **If it returns False, create it:**
+
+   ```powershell
+   New-Item -Type File -Path $PROFILE -Force
+   ```
+
+3. **Open your PowerShell profile:**
+
+   ```powershell
+   notepad $PROFILE
+   ```
+
+4. **Add this function inside:**
+
+   ```powershell
+   function mlec {
+       make -f "D:/Projects 2025/mlec-toolkit/Makefile" @args
+   }
+   ```
+
+5. **Save and restart PowerShell**
+
+**✅ Now you can use:**
+
+```powershell
+mlec create-next name=my-app
+mlec create-react-ts name=my-project
+```
+
+#### 🔥 Shell Compatibility Summary
+
+| Shell | Environment | Method | Syntax |
+|-------|-------------|--------|--------|
+| Git Bash | Windows | `alias` | `alias mlec='make -f "path/Makefile"'` |
+| PowerShell | Windows Terminal | `function` | `function mlec { make -f "path" @args }` |
+| WSL/Linux/macOS | Bash/Zsh | `alias` | `alias mlec='make -f /path/Makefile'` |
 
 > 💡 **Tip**: Create a dedicated directory for your makefiles (e.g., `D:/Projects 2025/mlec-toolkit/` or `C:/tools/makefiles/`) to keep them organized and easily accessible across all your projects.
 
@@ -79,7 +130,7 @@ Set-Alias -Name mlec -Value 'make -f "D:\Projects 2025\mlec-toolkit\Makefile"'
 make create-next name=my-awesome-app
 
 # Create a React TypeScript project (remote Makefile)
-make -f D:/Projects\ 2025/mlec-toolkit/Makefile create-react-ts name=my-react-app
+make -f D:/mlec-toolkit/Makefile create-react-ts name=my-react-app
 
 # Using alias (after setup)
 mlec create-vue-vite name=my-vue-app
