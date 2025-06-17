@@ -1,5 +1,5 @@
 
-# MLEC - Make Life Easier Commands
+# MLEC-Toolkit -> Make Life Easier Commands
 
 A Makefile toolkit for quickly scaffolding web development projects.
 
