@@ -1,7 +1,7 @@
 
 # MLEC-Toolkit
 
-A Makefile toolkit for easy, quick scaffolding web development projects.
+A Makefile toolkit for easy, quick scaffolding local web development projects.
 
 ## 📋 Overview
 
