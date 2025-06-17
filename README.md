@@ -7,6 +7,14 @@ A Makefile toolkit for quickly scaffolding web development projects.
 
 **MLEC** (Make Life Easier Commands) is a comprehensive Makefile toolkit designed to streamline the creation of various web development projects. Instead of remembering complex npm/npx commands, simply use short make commands to scaffold your projects instantly.
 
+## 📦 Prerequisites
+
+Before using MLEC, you need to have `make` installed on your system:
+
+- **Windows**: Install via Chocolatey: `choco install make` or use Git Bash (includes make)
+- **macOS**: Install via Homebrew: `brew install make` or use Xcode Command Line Tools
+- **Linux**: Usually pre-installed, or install via package manager: `sudo apt install make` (Ubuntu/Debian) or `sudo yum install make` (CentOS/RHEL)
+
 ## 🚀 Quick Start
 
 1. Place the `Makefile` in your projects directory
