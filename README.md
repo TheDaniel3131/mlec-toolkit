@@ -7,10 +7,6 @@ A Makefile toolkit for quickly scaffolding web development projects.
 
 **MLEC** (Make Life Easier Commands) is a comprehensive Makefile toolkit designed to streamline the creation of various web development projects. Instead of remembering complex npm/npx commands, simply use short make commands to scaffold your projects instantly.
 
-**Key Differences:**
-
-- **Toolkit vs Script:** A toolkit provides a complete set of organized tools and utilities (like this collection of make commands), while a script is typically a single executable file. This toolkit offers multiple interconnected commands working together as a cohesive development environment.
-
 **Author:** zephrous  
 **Project:** mlec-toolkit
 
