@@ -67,7 +67,7 @@ mlec create-astro name=my-site
 
 ```powershell
 # PowerShell requires a function, not an alias
-function make {
+function mlec {
     make -f "D:/mlec-toolkit/Makefile" @args
 }
 ```
@@ -99,7 +99,7 @@ In PowerShell, you can't create complex aliases like in bash. PowerShell aliases
 4. **Add this function inside:**
 
    ```powershell
-   function make {
+   function mlec {
        make -f "D:/mlec-toolkit/Makefile" @args
    }
    ```
@@ -118,7 +118,7 @@ mlec create-react-ts name=my-project
 | Shell | Environment | Method | Syntax |
 |-------|-------------|--------|--------|
 | Git Bash | Windows | `alias` | `alias mlec='make -f "path/Makefile"'` |
-| PowerShell | Windows Terminal | `function` | `function make { make -f "path" @args }` |
+| PowerShell | Windows Terminal | `function` | `function mlec { make -f "path" @args }` |
 | WSL/Linux/macOS | Bash/Zsh | `alias` | `alias mlec='make -f /path/Makefile'` |
 
 > 💡 **Tip**: Create a dedicated directory for your makefiles (e.g., `D:/mlec-toolkit/` or `C:/mlec-toolkit/makefiles/`) to keep them organized and easily accessible across all your projects.
