@@ -33,8 +33,8 @@ make create-next name=my-awesome-app
 
 ```bash
 # Use -f flag to specify Makefile path
-make -f D:/Projects\ 2025/mlec-toolkit/Makefile create-next name=my-awesome-app
-make -f C:/tools/makefiles/Makefile create-react name=my-react-app
+make -f D:/mlec-toolkit/Makefile create-next name=my-awesome-app
+make -f C:/mlec-toolkit/makefiles/Makefile create-react name=my-react-app
 ```
 
 ### 🔗 Setting Up Aliases (Recommended)
@@ -45,7 +45,7 @@ For easier access, create an alias to avoid typing the full path every time:
 
 ```bash
 # Add to ~/.bashrc or ~/.bash_profile
-alias mlec='make -f "D:/Projects 2025/mlec-toolkit/Makefile"'
+alias mlec='make -f "D:/mlec-toolkit/Makefile"'
 
 # Usage after alias setup
 mlec create-next name=my-awesome-app
@@ -68,7 +68,7 @@ mlec create-astro name=my-site
 ```powershell
 # PowerShell requires a function, not an alias
 function mlec {
-    make -f "D:/Projects 2025/mlec-toolkit/Makefile" @args
+    make -f "D:/mlec-toolkit/Makefile" @args
 }
 ```
 
@@ -100,7 +100,7 @@ In PowerShell, you can't create complex aliases like in bash. PowerShell aliases
 
    ```powershell
    function mlec {
-       make -f "D:/Projects 2025/mlec-toolkit/Makefile" @args
+       make -f "D:/mlec-toolkit/Makefile" @args
    }
    ```
 
@@ -121,7 +121,7 @@ mlec create-react-ts name=my-project
 | PowerShell | Windows Terminal | `function` | `function mlec { make -f "path" @args }` |
 | WSL/Linux/macOS | Bash/Zsh | `alias` | `alias mlec='make -f /path/Makefile'` |
 
-> 💡 **Tip**: Create a dedicated directory for your makefiles (e.g., `D:/Projects 2025/mlec-toolkit/` or `C:/tools/makefiles/`) to keep them organized and easily accessible across all your projects.
+> 💡 **Tip**: Create a dedicated directory for your makefiles (e.g., `D:/mlec-toolkit/` or `C:/mlec-toolkit/makefiles/`) to keep them organized and easily accessible across all your projects.
 
 ### Example Usage
 
